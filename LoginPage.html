@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page | W-Shopping</title>
+    <link rel="icon" href="img/logo-removebg-preview.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css""
+    />
+  </head>
+  <body>
+    <!------------------------------------------ Header Section ------------------------------------------->
+
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="LoginPage.html"
+            ><img src="img/brand-removebg-preview.png" width="125px"
+          /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="PageNotFound.html">Home</a></li>
+            <li><a href="PageNotFound.html">Products</a></li>
+            <li><a href="PageNotFound.html">About</a></li>
+            <li><a href="PageNotFound.html">Contact</a></li>
+            <li>
+              <a href="PageNotFound.html">Wishlist <i class="fa fa-heart"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <a href="PageNotFound.html"
+          ><img src="img/cart-removebg-preview.png" width="30px" height="30px"
+        /></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+
+    <!-- Account Page -->
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="Top3/cp2-removebg-preview.png" width="100%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+              </div>
+              <form id="LoginForm" action="index.html">
+                <input type="text" placeholder="&#128231 Enter Your Email" id="log-email"  />
+                <input
+                  type="password" id="log-pass"
+                  placeholder="&#128274 Enter Your Password"
+                />
+                <button type="submit" class="btn" onclick="validatelogin()">Login</button>
+                <h6 id="dont">
+                  Dont have an account?
+                  <a href="LoginPage.html" id="dont">Sign up</a>  
+                </h6>
+                <a href="">Forget Password</a>
+              </form>
+              <form id="RegForm" class="input-group"> 
+                <input type="email"  placeholder="&#128231 Email" id="email" onkeyup="validateemail()"  />
+                 <!-- <span id="email-error">Email is required</span> -->
+                 <label id="email-error"></label>
+                <input type="text"  placeholder="&#8711 Full Name" id="name" onkeyup="validatename()"  />
+                <!-- <span id="name-error">Name is required</span> -->
+                <label id="name-error"></label>
+                <input type="password" placeholder="&#128274 Password" id="pass" onkeyup="validatepass()"  />
+                <!-- <span id="pass-error">Password is required</span> -->
+                <label id="pass-error"></label>   
+                <input type="password" placeholder="&#128274 Confrim Your Password" id="repass" onkeyup="validaterepass()"/>
+                <!-- <span id="num-error">Number is required</span> -->
+                <label id="repass-error"></label>
+                <button type="submit" class="btn" onclick="validateform()">Register</button> 
+                <label id="submit-error"></label> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Footer Section -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>App Download</h3>
+            <p>Available for Android and Ios Mobile</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="img/brand-removebg-preview.png" />
+            <p>
+              The Main Purpose to get the app to each and every individual to
+              access these facilties
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyright">Copyright 2023 - W-Shopping ©</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
